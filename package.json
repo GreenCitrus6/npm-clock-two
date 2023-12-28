@@ -1,0 +1,27 @@
+{
+  "name": "npm-clock-two",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "web-dev-server --node-resolve --open --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GreenCitrus6/npm-clock-two"
+  },
+  "author": "Daniel Aadland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GreenCitrus6/npm-clock-two/issues"
+  },
+  "homepage": "https://github.com/GreenCitrus6/npm-clock-two#readme",
+  "devDependencies": {
+    "@web/dev-server": "^0.4.1",
+    "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10"
+  }
+}
