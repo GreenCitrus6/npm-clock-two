@@ -17,3 +17,24 @@ MicroModal.init({
 // For every available time zone, create an option within #timezone-select
 
 const timezoneArr = [];
+// set current timezone to the top select
+let timezoneHtml = `<option>${currentTimezone}</option>`;
+
+for (const timeZone of Intl.supportedValuesOf('timeZone')) {
+    timezoneArr.push(timeZone);
+}
+
+timezoneArr.map((timeZone, index) => {
+    timezoneHtml += `<option id="" class="timezone-option">${timeZone}</option>`;
+});
+
+document.querySelector('#timezone-select').innerHTML = timezoneHtml;
+
+document.querySelector('#apply-button').addEventListener('click', () => updateTimezone());
+
+function updateTimezone() {
+    let newTimezone = document.querySelector('#timezone-select').value
+    console.log(`Timezone is set to ${newTimezone}`);
+    currentTimezone = newTimezone
+    document.querySelector('#timezone').innerHTML = `${newTimezone}`
+}
