@@ -9,8 +9,8 @@
     <script src="dist/main.js" type="module"></script>
 </head>
 <body class="bg-stone-700 text-stone-300 font-mono opacity-90">
-    <main class="flex h-screen">
-        <div class="m-auto block">
+    <main class="flex h-screen min-w-[320px] overflow-x-hidden">
+        <div class="m-auto block min-w-[320px]">
             <div class="flex justify-end">
                 <span id="timezone" class="text-3xl hover:cursor-pointer"
                 data-micromodal-trigger="timezone-modal">Timezone</span>
@@ -33,7 +33,7 @@
         bg-[rgb(0,0,0,0.4)]">
             <div role="dialog" aria-modal="true" aria-labelledby="timezone-modal-title"
             class="bg-stone-600 text-stone-100
-            max-w-96 max-h-80 w-1/2 h-3/4
+            max-w-96 max-h-80 w-1/2 h-3/4 min-h-44 min-w-40 
             rounded-sm">
 
                 <header class="flex justify-between
@@ -45,14 +45,12 @@
                     <button aria-label="Close modal" data-micromodal-close>X</button>
                 </header>
 
-                <div id="timezone-modal-content" class="flex flex-col justify-between
-                h-[80%]
-                p-6 pt-2">
-                    <select id="timezone-select" class="text-stone-700 w-full max-h-full
+                <div id="timezone-modal-content" class="flex flex-col justify-between h-[calc(100%_-_5.5rem)] p-6 pt-2">
+                    <select id="timezone-select" class="text-stone-700 w-full
                     overflow-y-scroll">
                         <option>Guessed Timezone</option>
                     </select>
-                    <button id="apply-button" data-micromodal-close>Apply</button>
+                    <button id="apply-button" class="pt-1" data-micromodal-close>Apply</button>
                 </div>
 
             </div>
